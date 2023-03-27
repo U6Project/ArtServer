@@ -1,4 +1,5 @@
-let page = 21
+let page = 32
+
 let expoObj = {
     page2ArtPiece: null,
 }
