@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="artic-gallery-page2.css">
-    <script defer src="artic-gallery-page2.js"></script>
+    <link rel="stylesheet" href="personal-collection.css">
+    <script defer src="personal-collection.js"></script>
 </head>
 <body  style="background-color: black;">
     <header class="header">
-        <nav class="navbar navbar-expand-sm py-4 navbar-dark mb-2" style="background-color: black;">
+        <nav class="navbar navbar-expand-sm py-4 navbar-dark mb-2 fixed-top" style="background-color: black;">
           <div class="container-fluid">
             <a class="navbar-brand m-2" href="" style="font-family: 'Montserrat', sans-serif;"><h1 class="h2" style="text-decoration: none;"><i>artServer</i></h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,27 +37,12 @@
         </nav>
       </header>
       <main>
-        
         <div class="row text-center" style="font-family: 'Montserrat', sans-serif; color: bisque;">
-          <h1 id="artTitle" class="display-1 mt-3"></h1>
-        </div>
-        <div class="row text-center" style="font-family: 'Montserrat', sans-serif; color: bisque;">
-          <h1 id="artDate" class="h1 mb-5"></h1>
-        </div>
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10"><img id="spotLightImage" class="img-fluid img-thumbnail rounded mx-auto d-block" style ="max-height: 90vh;"></div>
-          <div class="col-1"></div>
-        </div>
-        <div class="row text-center mt-2" style="font-family: 'Montserrat', sans-serif; color: bisque;">
-          <h1 id="artArtist" class="h3 mt-2"></h1>
-        </div>
-        <div class="row text-center mt-5" style="font-family: 'Montserrat', sans-serif; color: bisque;">
-          <button type="button" id="addToCollection" class="btn btn-outline-warning mx-auto d-block" style="max-width: 500px;"><h1 class="h3">Add to Collection?</h1></button>
-        </div>
-        
-        
-
+          <h1 class="display-5  mb-5">Personal Gallery</h1>
+      </div>
+      <div class="row mx-auto d-block mr-1" id="Gallery">
+    
+      </div>
       </main>
       
       <div class="container">

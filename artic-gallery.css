@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     padding: 0 4px;
   }
-  /* .col-4 {
+  .col-4 {
     flex: 25%;
     max-width: 33.3%;
     padding: 0 4px;
-  } */
+  }
   
   .col-4 img {
     margin-top: 8px;
@@ -27,11 +27,7 @@
     display: inline-block;
     padding: 3px;
   }
-  @media (max-width: 768px){
-    .fixed-top {
-      position: static;
-     }
-  }
+  
   .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
