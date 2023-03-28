@@ -1,4 +1,4 @@
-let page = 32
+let page = Math.floor(Math.random() * (100 - 4)) + 4
 
 let expoObj = {
     page2ArtPiece: null,

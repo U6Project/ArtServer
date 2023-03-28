@@ -8,14 +8,13 @@ document.getElementById("artDate").innerText = `${page2ArtPiece.date_display}`
 document.getElementById("addToCollection").addEventListener("click", () => {
     document.getElementById("addToCollection").innerText = "added"
     if(localStorage.getItem("personalCollection")){
-        console.log(localStorage.getItem("personalCollection"));
         personalCollection = JSON.parse(localStorage.getItem("personalCollection"));
-        personalCollection.push(page2ArtPiece);
+        personalCollection[page2ArtPiece.title] = page2ArtPiece;
         personalCollection = JSON.stringify(personalCollection)
         localStorage.setItem("personalCollection", personalCollection);
     }else{
-        let personalCollection = [];
-        personalCollection.push(page2ArtPiece)
+        let personalCollection = {};
+        personalCollection[page2ArtPiece.title] = page2ArtPiece;
         localStorage.setItem("personalCollection", JSON.stringify(personalCollection));
     }
 })
