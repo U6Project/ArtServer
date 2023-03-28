@@ -27,11 +27,7 @@
     display: inline-block;
     padding: 3px;
   }
-  @media (max-width: 768px){
-    .fixed-top {
-      position: static;
-     }
-  }
+  
   .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
