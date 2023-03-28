@@ -1,8 +1,7 @@
-fetch(`https://api.harvardartmuseums.org/object?${API_key.havard}`) 
-    .then(response => response.json())
+fetch(`https://api.harvardartmuseums.org/object?apikey=${API_key.havard}`) // returns a Promise
+    .then(response => response.json()) // also returns a Promise
     .then(data => {
-        console.log(data)
+        // do stuff with the data
+        console.log(data) // prints the JSON data
     })
-    .catch(error => {
-         console.error('Error', error)
-    });
+    .catch(error => console.log(error))
