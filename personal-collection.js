@@ -12,7 +12,7 @@ for(let i = Object.keys(personalCollection).length - 1; i > 0 ;i--){
     const artDate = document.createElement("div");
     const spotLightImage = document.createElement("img");
     const artTile = document.createElement("div");
-    const addToCollection = document.createElement("button");
+    const removefromCollection = document.createElement("button");
     row1.className = "mt-5 row text-center"
     row2.className = "row text-center"
     row3.className = "row text-center"
@@ -28,17 +28,17 @@ for(let i = Object.keys(personalCollection).length - 1; i > 0 ;i--){
     spotLightImage.className="img-fluid img-thumbnail rounded mx-auto d-block"
     spotLightImage.style ="max-width: 30vh;"
     spotLightImage.src=`https://www.artic.edu/iiif/2/${personalCollection[Object.keys(personalCollection)[i]].image_id}/full/843,/0/default.jpg`
-    addToCollection.style="max-width: 300px;"
-    addToCollection.className="btn btn-outline-warning mx-auto d-block"
+    removefromCollection.style="max-width: 300px;"
+    removefromCollection.className="btn btn-outline-warning mx-auto d-block"
     artTile.innerText=`${personalCollection[Object.keys(personalCollection)[i]].title}`
     artDate.innerText=`${personalCollection[Object.keys(personalCollection)[i]].date_display}`
     artArtist.innerText = `${personalCollection[Object.keys(personalCollection)[i]].artist_display}`
-    addToCollection.innerText = "remove from collection?"
+    removefromCollection.innerText = "remove from collection?"
     row1.append(artTile);
     row2.append(artDate);
     row3.append(spotLightImage);
     row4.append(artArtist);
-    row5.append(addToCollection);
+    row5.append(removefromCollection);
     gallery.append(row1);
     gallery.append(row2);
     gallery.append(row3);
@@ -61,5 +61,5 @@ console.log()
 <h1 id="artArtist" class="h3 mt-2"></h1>
 </div>
 <div class="row5 text-center mt-5" style="font-family: 'Montserrat', sans-serif; color: bisque;">
-<button type="button" id="addToCollection" class="btn btn-outline-warning mx-auto d-block" style="max-width: 500px;"><h1 class="h3">Add to Collection?</h1></button>
+<button type="button" id="removefromCollection" class="btn btn-outline-warning mx-auto d-block" style="max-width: 500px;"><h1 class="h3">Add to Collection?</h1></button>
 </div> */}
