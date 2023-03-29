@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 let page = 1;
+=======
+let page = Math.floor(Math.random() * (100 - 4)) + 4
+>>>>>>> cb8864e453d392baf3fdccc72c58198b7e514724
 let expoObj = {
     page2ArtPiece: null,
 }
@@ -39,7 +43,7 @@ function fillGallery(){
         for(let i = 0; i < 5; i++){
             let artpiece = document.createElement("a");
             let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
+            artpiece.className = `row m-2 reveal`
             artpiece.id = "" + w
             artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
@@ -56,7 +60,7 @@ function fillGallery(){
         for(let i = 0; i < 5; i++){
             let artpiece = document.createElement("a");
             let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
+            artpiece.className = `row m-2 reveal`
             artpiece.id = "" + w
             artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
@@ -73,7 +77,7 @@ function fillGallery(){
         for(let i = 0; i < 5; i++){
             let artpiece = document.createElement("a");
             let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
+            artpiece.className = `row m-2 reveal`
             artpiece.id = "" + w
             artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
@@ -86,5 +90,28 @@ function fillGallery(){
             artpiece.append(artimage);
             column3.append
         }
+<<<<<<< HEAD
     }
 )}
+=======
+    });
+}
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+>>>>>>> cb8864e453d392baf3fdccc72c58198b7e514724
