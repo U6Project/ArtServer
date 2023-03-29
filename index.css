@@ -22,13 +22,9 @@ main {
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://i.etsystatic.com/7608365/r/il/9f3bec/4116669536/il_fullxfull.4116669536_hg7e.jpg");
     background-size: cover;
     background-position: center center;
+    background-color: black;
   }
 
   h1 {
     color: white;
   }
-
-  header {
-    
-  }
-  

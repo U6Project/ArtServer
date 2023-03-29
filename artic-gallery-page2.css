@@ -4,12 +4,12 @@
     padding: 0 4px;
   }
   
-  @media (min-width: 768px){
+  @media (max-width: 768px){
     .fixed-top {
       position: static;
      }
      #artTitle{
-        margin-top: 100px;
+        margin-top: 600px;
      }
   }
   
