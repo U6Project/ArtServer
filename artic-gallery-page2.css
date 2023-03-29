@@ -4,15 +4,13 @@
     padding: 0 4px;
   }
   
-  @media (max-width: 768px){
+  /* @media (max-width: 768px){
     .fixed-top {
       position: static;
      }
-     #artTitle{
-        margin-top: 600px;
-     }
+     
   }
-  
+   */
   .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);

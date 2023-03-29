@@ -64,4 +64,14 @@
       filter: grayscale(0) brightness(1);
     }
   }
-  
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.5s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
