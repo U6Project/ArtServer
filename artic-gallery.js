@@ -1,9 +1,9 @@
-// let page = Math.floor(Math.random() * (100 - 4)) + 4
-let page = 34;
+let page = 1;
 let expoObj = {
     page2ArtPiece: null,
 }
-fillGallery()
+fillGallery();
+
 document.getElementById("prev").addEventListener("click", () => {
     if(page === 1){
         return
@@ -11,24 +11,27 @@ document.getElementById("prev").addEventListener("click", () => {
         page--
         fillGallery()
     }
-})
+});
+
 document.getElementById("next").addEventListener("click",() => {
     page++
     fillGallery()
-} )
+});
+
 function fillGallery(){
     const Gallery = document.getElementById("Gallery");
-    Gallery.innerHTML = ""
+    Gallery.innerHTML = "";
     const column1 = document.createElement("div");
     const column2 = document.createElement("div");
     const column3 = document.createElement("div");
-    column1.className = "col-4"
-    column2.className = "col-4"
-    column3.className = "col-4"
+    column1.className = "col-4";
+    column2.className = "col-4";
+    column3.className = "col-4";
     Gallery.append(column1);
     Gallery.append(column2);
     Gallery.append(column3);
-    fetch(`https://api.artic.edu/api/v1/artworks/?page=${page}&limit=15`)
+
+    fetch(`https://your-api-url.com/api/v1/artworks?page=${page}&limit=15`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -38,12 +41,12 @@ function fillGallery(){
             let artimage = document.createElement("img");
             artpiece.className = `row m-2`
             artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
+            artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
+            artimage.src = `https://your-api-url.com${data.records[w].image_url}`
             artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
+                console.log(data.records[artpiece.id])
+                var page2ArtPiece = JSON.stringify(data.records[artpiece.id]);
                 sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
             })
             artpiece.append(artimage);
@@ -55,12 +58,12 @@ function fillGallery(){
             let artimage = document.createElement("img");
             artpiece.className = `row m-2`
             artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
+            artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
+            artimage.src = `https://your-api-url.com${data.records[w].image_url}`
             artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
+                console.log(data.records[artpiece.id])
+                var page2ArtPiece = JSON.stringify(data.records[artpiece.id]);
                 sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
             })
             artpiece.append(artimage);
@@ -72,17 +75,16 @@ function fillGallery(){
             let artimage = document.createElement("img");
             artpiece.className = `row m-2`
             artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
+            artpiece.href = "your-artic-gallery-page2.html"
             artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
+            artimage.src = `https://your-api-url.com${data.records[w].image_url}`
             artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
+                console.log(data.records[artpiece.id])
+                var page2ArtPiece = JSON.stringify(data.records[artpiece.id]);
                 sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
             })
             artpiece.append(artimage);
-            column3.append(artpiece);
-            w++;
+            column3.append
         }
-    });
-}
+    }
+)}
