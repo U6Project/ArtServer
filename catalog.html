@@ -4,81 +4,135 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <style>
-      .card {
-        background-color: white; 
-        margin-top: 150px;
-        width: 75%;
-      }
-      body {
-        background-color: black;
-      }
-      .card-text {
-        font-size: small;
-      }
-    </style>
-    <title>Document</title>
+    <title>ArtServer</title>
   </head>
-  <body>
+  <body style="background-color: black;">
     <header class="header">
-        <nav class="navbar navbar-expand-sm  navbar-dark mb-5 fixed-top" style="background-color: black;">
-          <div class="container-fluid">
-            <a class="navbar-brand m-2" href="" style="font-family: 'Montserrat', sans-serif;"><h1 class="h5" style="text-decoration: none;"><i>ArtServer</i></h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-  
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="personal-collection.html">Personal Collection</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="havard-art.html" >Harvard Art Museum</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="artic-gallery.html">Chicago Institute of Art</a>
-                </li>
-              </ul>
-            </div>
+      <nav class="navbar navbar-expand-sm py-4 navbar-dark mb-5 fixed-top" style="background-color: black;">
+        <div class="container-fluid">
+          <a class="navbar-brand m-2" href="" style="font-family: 'Montserrat', sans-serif;"><h1 class="h2" style="text-decoration: none;"><i>ArtServer</i></h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="personal-collection.html">Personal Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="havard-art.html" >Harvard Art Museum</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="artic-gallery.html">Chicago Institute of Art</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
-    <div class="row row-cols-1 row-cols-md-3 g-4 ms-20">
-      <div class="col offset-md-2">
-        <div class="card h-75">
-          <img src="https://media.timeout.com/images/102850781/image.jpg" class="card-img-top" alt="...">
-          <div class="card-body pt-1">
-            <a href="artic-gallery.html" class="card-title fs-6 fw-bold mt-0">Chicago Art Institute</a> 
-            <p class="card-text">The Art Institute of Chicago shares its singular collections with our city and the world. We collect, care for, and interpret works of art across time, cultures, geographies, and identities, centering the vision of artists and makers. We recognize that all art is made in a particular context, demanding continual, dynamic reconsideration in the present. We are a place of gathering we foster the exchange of ideas and inspire an expansive, inclusive understanding of human creativity. </p>
-          </div>
+        </div>
+      </nav>
+    </header>
 
+
+
+  <main>
+    <div class="row mx-auto" style="margin-top: 10vh;">
+      <div class="mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning">
+         <img src="https://media.timeout.com/images/102850781/image.jpg" class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title">Chicago Institute of Art</h5>
+            <p class="card-text">The Art Institute of Chicago shares its singular collections with our city and the world. We collect, care for, and interpret works of art across time, cultures, geographies, and identities, centering the vision of artists and makers. We recognize that all art is made in a particular context, demanding continual, dynamic reconsideration in the present. We are a place of gathering we foster the exchange of ideas and inspire an expansive, inclusive understanding of human creativity.</p>
+            <a href="artic-gallery.html" class="btn btn-outline-dark"><h1 class="h5"> Tour Available </h1></a>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-75">
+      <div class="mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning" style="">
           <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
-          <div class="card-body pt-1 h-100">
-            <a href="havard-art.html" class="card-title fs-6 fw-bold mt-0">Havard Art Museum</a> 
+          <div class="card-body">
+            <h5 class="card-title">Harvard Art Museum</h5>
             <p class="card-text">Ever since their founding, the Harvard Art Museums—the Fogg Museum, Busch-Reisinger Museum, and Arthur M. Sackler Museum—have been dedicated to advancing and supporting learning at Harvard University, in the local community, and around the world. The museums have played a leading role in the development of art history, conservation, and conservation science, and in the evolution of the art museum as an institution.</p>
+            <a href="havard-art.html" class="btn btn-outline-dark"><h1 class="h5">Tour Available</h1></a>
+          </div>
+        </div>
+      </div>
+      <div class=" mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning" style="">
+          <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Harvard Art Museum</h5>
+            <p class="card-text">Ever since their founding, the Harvard Art Museums—the Fogg Museum, Busch-Reisinger Museum, and Arthur M. Sackler Museum—have been dedicated to advancing and supporting learning at Harvard University, in the local community, and around the world. The museums have played a leading role in the development of art history, conservation, and conservation science, and in the evolution of the art museum as an institution.</p>
+            <a href="havard-art.html" class="btn btn-dark disabled"><h1 class="h5">Tour Unavailable</h1></a>
+          </div>
+        </div>
+      </div>
+      <div class=" mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning" style="">
+          <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Harvard Art Museum</h5>
+            <p class="card-text">Ever since their founding, the Harvard Art Museums—the Fogg Museum, Busch-Reisinger Museum, and Arthur M. Sackler Museum—have been dedicated to advancing and supporting learning at Harvard University, in the local community, and around the world. The museums have played a leading role in the development of art history, conservation, and conservation science, and in the evolution of the art museum as an institution.</p>
+            <a href="havard-art.html" class="btn btn-dark disabled"><h1 class="h5">Tour Unavailable</h1></a>
+          </div>
+        </div>
+      </div>
+      <div class=" mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning" style="">
+          <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Harvard Art Museum</h5>
+            <p class="card-text">Ever since their founding, the Harvard Art Museums—the Fogg Museum, Busch-Reisinger Museum, and Arthur M. Sackler Museum—have been dedicated to advancing and supporting learning at Harvard University, in the local community, and around the world. The museums have played a leading role in the development of art history, conservation, and conservation science, and in the evolution of the art museum as an institution.</p>
+            <a href="havard-art.html" class="btn btn-dark disabled"><h1 class="h5">Tour Unavailable</h1></a>
+          </div>
+        </div>
+      </div>
+      <div class=" mb-3 mb-l-0" style="max-width: 1000px;">
+        <div class="card text-center text-black bg-warning" style="">
+          <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Harvard Art Museum</h5>
+            <p class="card-text">Ever since their founding, the Harvard Art Museums—the Fogg Museum, Busch-Reisinger Museum, and Arthur M. Sackler Museum—have been dedicated to advancing and supporting learning at Harvard University, in the local community, and around the world. The museums have played a leading role in the development of art history, conservation, and conservation science, and in the evolution of the art museum as an institution.</p>
+            <a href="" class="btn btn-dark disabled"><h1 class="h5">Tour Unavailable</h1></a>
           </div>
         </div>
       </div>
     </div>
+    </main>
+      <!-- <div class="col offset-md-2">
+        <div class="card text-bg-warning h-75">
+          <img src="https://media.timeout.com/images/102850781/image.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-1">
+            <a href="artic-gallery.html" class="card-title fs-6 fw-bold mt-0">Chicago Art Institute</a> 
+            <p class="card-text"> </p>
+          </div>
+
+        </div>
+        
+      </div> -->
+      <!-- <div class="col">
+        <div class="card text-bg-warning h-75">
+          <img src="https://static01.nyt.com/images/2014/11/16/arts/design/2014116-MUSEUM-slide-YXCS/2014116-MUSEUM-slide-YXCS-jumbo.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-1 h-100">
+            <a href="havard-art.html" class="card-title fs-6 fw-bold mt-0">Havard Art Museum</a> 
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    <footer class="py-3 my-4">
+    <!-- <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
@@ -87,6 +141,6 @@
         </ul>
         <p class="text-center text-muted">© 2022 ArtServer, Inc</p>
     </main>
-      </footer>
+      </footer> -->
   </body>
 </html>
