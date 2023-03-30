@@ -1,4 +1,5 @@
-let page = Math.floor(Math.random() * (100 - 4)) + 4
+// let page = Math.floor(Math.random() * (100 - 4)) + 4
+let page = 1;
 let expoObj = {
     page2ArtPiece: null,
 }

@@ -3,13 +3,13 @@
     flex-wrap: wrap;
     padding: 0 4px;
   }
-  .col-4 {
+  .col-3 {
     flex: 25%;
     max-width: 33.3%;
     padding: 0 4px;
   }
   
-  .col-4 img {
+  .col-3 img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
@@ -17,7 +17,7 @@
     cursor: pointer;
     transition: 0.3s linear;
   }
-  .col-4 img:hover {
+  .col-3 img:hover {
     filter: grayscale(1);
   }
 
@@ -49,18 +49,18 @@
   }
   
   @media screen and (max-width: 800px) {
-    .col-4 {
+    .col-3 {
       flex: 50%;
       max-width: 50%;
     }
   }
   
   @media screen and (max-width: 600px) {
-    .col-4 {
+    .col-3 {
       flex: 100%;
       max-width: 100%;
     }
-    .col-4 img {
+    .col-3 img {
       filter: grayscale(0) brightness(1);
     }
   }
