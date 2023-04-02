@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Times New Roman', Times, serif; */
+    box-sizing: border-box;
+    background-color: #191919;
+}
+
+.about{
+    width: 100%;
+    padding: 78px 0px;
+}
+
+.about img {
+    height: auto;
+    width: 420px;
+    
+}
+
+.about-text {
+    width: 550px;
+    color: white;
+}
+
+.main {
+    padding-top: 5%;
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h1 {
+    color: bisque;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: bisque;
+}
+
+.about-text p {
+color: white;
+letter-spacing: 1px;
+line-height: 28px;
+font-size: 18px;
+margin-bottom: 45px;
+}
+
+button {
+    background: bisque;
+    color: #191919;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+ background: transparent;
+ border: 2px solid bisque;
+ cursor: pointer;
+ color: bisque;
+}
+
+footer {
+    padding-top: 10%;
+}
+
+/* Gabriel
+.about{
+    width: 100%;
+    padding: 78px 0px;
+}
+
+.about img {
+    height: auto;
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    padding-top: 5%;
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h1 {
+    color: bisque;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: bisque;
+}
+
+.about-text p {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button {
+    background: bisque;
+    color: #191919;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid bisque;
+    cursor: pointer;
+    color: bisque;
+}
+
+footer {
+    padding-top: 10%;
+} */
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .main {
+        flex-wrap: wrap;
+        padding-top: 10%;
+    }
+
+    .about {
+        padding: 50px 0px;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .about-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .about-text h5 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
