@@ -16,79 +16,57 @@ document.getElementById("next").addEventListener("click",() => {
     page++
     fillGallery()
 } )
-function fillGallery(){
+
+function fillGallery() {
     const Gallery = document.getElementById("Gallery");
-    Gallery.innerHTML = ""
-    const column1 = document.createElement("div");
-    const column2 = document.createElement("div");
-    const column3 = document.createElement("div");
-    column1.className = "col-4"
-    column2.className = "col-4"
-    column3.className = "col-4"
-    Gallery.append(column1);
-    Gallery.append(column2);
-    Gallery.append(column3);
+    Gallery.innerHTML = "";
+
+    const columns = [];
+    for (let i = 0; i < 3; i++) {
+        const column = document.createElement("div");
+        column.className = "col-4";
+        Gallery.append(column);
+        columns.push(column);
+    }
+
     fetch(`https://api.artic.edu/api/v1/artworks/?page=${page}&limit=15`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        let w = 0
-        for(let i = 0; i < 5; i++){
-            let artpiece = document.createElement("a");
-            let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
-            artpiece.className = `row m-2 reveal`
-            artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
-            artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
-            artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
-                sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
-            })
-            artpiece.append(artimage);
-            column1.append(artpiece);
-            w++;
-        }
-        for(let i = 0; i < 5; i++){
-            let artpiece = document.createElement("a");
-            let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
-            artpiece.className = `row m-2 reveal`
-            artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
-            artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
-            artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
-                sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
-            })
-            artpiece.append(artimage);
-            column2.append(artpiece);
-            w++;
-        }
-        for(let i = 0; i < 5; i++){
-            let artpiece = document.createElement("a");
-            let artimage = document.createElement("img");
-            artpiece.className = `row m-2`
-            artpiece.className = `row m-2 reveal`
-            artpiece.id = "" + w
-            artpiece.href = "artic-gallery-page2.html"
-            artimage.className = "img-fluid img-thumbnail"
-            artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`
-            artpiece.addEventListener("click", () => {
-                console.log(data.data[artpiece.id])
-                var page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
-                sessionStorage.setItem("page2ArtPiece", page2ArtPiece);
-            })
-            artpiece.append(artimage);
-            column3.append(artpiece);
-            w++;
-        }
-    });
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            let w = 0;
+            for (let j = 0; j < columns.length; j++) {
+                for (let i = 0; i < 5; i++) {
+                    const artpiece = document.createElement("a");
+                    const artimage = document.createElement("img");
+                    artpiece.className = `row m-2 reveal`;
+                    artpiece.id = `${w}`;
+                    artpiece.href = "artic-gallery-page2.html";
+                    artimage.className = "img-fluid img-thumbnail";
+                    artimage.src = `https://www.artic.edu/iiif/2/${data.data[w].image_id}/full/843,/0/default.jpg`;
+                    artpiece.addEventListener("click", () => {
+                        console.log(data.data[artpiece.id]);
+                        const page2ArtPiece = {
+                            imageSrc:`https://www.artic.edu/iiif/2/${data.data[artpiece.id].image_id}/full/843,/0/default.jpg`,
+                            title: data.data[artpiece.id].title,
+                            date: data.data[artpiece.id].date_display,  
+                            artist: data.data[artpiece.id].artist_display,     
+                        }
+                        // const page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
+                        sessionStorage.setItem("page2ArtPiece", JSON.stringify(page2ArtPiece));
+                    });
+                    artpiece.append(artimage);
+                    columns[j].append(artpiece);
+                    w++;
+                }
+            }
+        });
 }
+// const page2ArtPiece = {
+//     imageSrc:`${data.records[w].images[0].iiifbaseuri}/full/full/0/default.jpg`,
+//     title: data.records[artpiece.id].title,
+//     date: data.records[artpiece.id].dated,  
+//     artist: data.records[artpiece.id].provenance,     
+// }
 
 
 function reveal() {

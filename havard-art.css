@@ -17,9 +17,9 @@
     cursor: pointer;
     transition: 0.3s linear;
   }
-  .col-3 img:hover {
+  /* .col-3 img:hover {
     filter: grayscale(1);
-  }
+  } */
 
   .arrow {
     border: solid bisque;
@@ -60,9 +60,9 @@
       flex: 100%;
       max-width: 100%;
     }
-    .col-3 img {
+    /* .col-3 img {
       filter: grayscale(0) brightness(1);
-    }
+    } */
   }
 
   .reveal{
