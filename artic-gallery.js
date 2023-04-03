@@ -1,5 +1,5 @@
-// let page = Math.floor(Math.random() * (100 - 4)) + 4
-let page = 1;
+let page = Math.floor(Math.random() * (100 - 4)) + 4
+// let page = 33;
 let expoObj = {
     page2ArtPiece: null,
 }
@@ -16,11 +16,9 @@ document.getElementById("next").addEventListener("click",() => {
     page++
     fillGallery()
 } )
-
 function fillGallery() {
     const Gallery = document.getElementById("Gallery");
     Gallery.innerHTML = "";
-
     const columns = [];
     for (let i = 0; i < 3; i++) {
         const column = document.createElement("div");
@@ -28,7 +26,6 @@ function fillGallery() {
         Gallery.append(column);
         columns.push(column);
     }
-
     fetch(`https://api.artic.edu/api/v1/artworks/?page=${page}&limit=15`)
         .then(response => response.json())
         .then(data => {
@@ -48,8 +45,8 @@ function fillGallery() {
                         const page2ArtPiece = {
                             imageSrc:`https://www.artic.edu/iiif/2/${data.data[artpiece.id].image_id}/full/843,/0/default.jpg`,
                             title: data.data[artpiece.id].title,
-                            date: data.data[artpiece.id].date_display,  
-                            artist: data.data[artpiece.id].artist_display,     
+                            date: data.data[artpiece.id].date_display,
+                            artist: data.data[artpiece.id].artist_display,
                         }
                         // const page2ArtPiece = JSON.stringify(data.data[artpiece.id]);
                         sessionStorage.setItem("page2ArtPiece", JSON.stringify(page2ArtPiece));
@@ -64,19 +61,15 @@ function fillGallery() {
 // const page2ArtPiece = {
 //     imageSrc:`${data.records[w].images[0].iiifbaseuri}/full/full/0/default.jpg`,
 //     title: data.records[artpiece.id].title,
-//     date: data.records[artpiece.id].dated,  
-//     artist: data.records[artpiece.id].provenance,     
+//     date: data.records[artpiece.id].dated,
+//     artist: data.records[artpiece.id].provenance,
 // }
-
-
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
-
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
       var elementVisible = 150;
-
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
       } else {
@@ -84,5 +77,4 @@ function reveal() {
       }
     }
   }
-
   window.addEventListener("scroll", reveal);
